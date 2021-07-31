@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hoja de vida</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="MaquetadoH.css">
+  <script type="text/javascript">
+  function addnum(){
+    var num=1;
+    document.getElementById('hojanum').value=num;
+  }
+  function addideq(){
+    var num=1;
+    document.getElementById('idequipo').value=("EQ"+num);
+  }
+  </script>
+</head>
+<body>
+  <div id="contenedor">
+    <div id="cabecera"> 
+    <div id="logo"> <img src="img/Logocwh1.1.png" height="100"></div>
+    <div id="header"> <h1><center><FONT SIZE=6>Plataforma de Asistencia en Control y Gestión de Activos</h1></center></FONT></div>
+    <div id="logueo"> <img src="img/LoginCamilo.png" height="55"></div>
+    <div id="contenido">
+      <div id="section">
+      <ul class="navbar">
+      <li><a href="Paginaerror404.html">ADMINISTRACIÓN</a>
+      <li><a href="Paginaerror404.html">PRESTAMO</a>
+      <li><a href="Hojadevida.html">HOJA DE VIDA EQUIPOS</a>
+      <li><a href="AsignacionA.html">ASIGNACIÓN DE EQUIPOS</a>
+      <li><a href="Paginaerror404.html">REPORTES</a>
+      <li><a href="IndexP.html">SALIR</a>   
+      </ul>
+    <div id="footer"> 
+      <br>
+      <p><h4><center>Software Pacga es una marca registrada desarrollada y aprobada por Mayer Contreras, Dayana Espitia, Paola Manrique y Camilo Silva</center></h4></p>
+      <p><h4><center>Copyright todos los derechos reservados</center></h4></p>
+      <p><h4><center>Noviembre 2020</center></h4></p>
+      </div>
+    </div>         
+      </div>
+      <div id="aside"> 
+      <center>
+      <table border=2>
+      <tr><td>
+      <p><h2><center>Registro hoja de vida equipo</h2></center></p>
+      </tr></td>
+      </table>
+      </center> 
+      <br>
+      <p><center><h3><FONT SIZE=3>Datos del equipo</p></h3></font></center>
+      <br>
+     <form action="Paginaerror500N.html" target="" method="get" name="DatosPersonales">
+
+    <label for="hojanum">Hoja de vida no.</label>
+    <input type="text" name="hojanum" id="hojanum" placeholder="##" readonly="readonly" onfocus="addnum()" tittle="De clic para asignar número">
+
+    <label for="idequipo">Id equipo</label>
+    <input type="text" name="idequipo" id="idequipo" placeholder="EQ##" readonly="readonly" onfocus="addideq()" tittle="De clic para asignar número">    
+
+    <label for="Serial del equipo">S/N</label>
+    <input type="text" name="snequipo" id="snequipo" placeholder="ABCDE###########" pattern="[A-Z0-9]{8,22}" title="Número serial del equipo, recuerde es alfanúmerico"required>
+
+    <label for="marca">Marca</label>
+    <input type ="text" name="marca" id="marca" placeholder="Marca equipo" pattern="[A-Za-z]{2,10}" required>
+
+    <label for="tiporam" />Tipo RAM</label>
+      <select name="tiporam" id="tiporam">
+        <option value="DDR1">DDR1</option> 
+        <option value="DDR2">DDR2</option> 
+        <option value="DDR3">DDR3</option>
+        <option value="DDR4">DDR3</option>
+      </select>
+
+    <label for="cantram">Capacidad RAM</label>
+    <input type ="text" name="cantram" id="cantram" placeholder="## GB-MB" pattern="[0-9]{1,2} [GB,MB]{2}" required tittle="Recuerde colocar la capacidad de la RAM en GB ó MB ">
+
+    <label for="disco" />Marca disco duro</label>
+    <input type="text" name="disco" id="disco" placeholder="Marca disco duro" pattern="[a-zA-Z ]{5,20}" required>
+
+   <label for="tipodisco" />Tipo disco duro</label>
+      <select name="tipodisco" id="tipodisco">
+        <option value="HDD">HDD</option> 
+        <option value="SSD">SSD</option> 
+        <option value="M2">M2</option>
+      </select>
+
+    <label for="teclado">Marca teclado</label>
+    <input type="text" name="teclado" id="teclado" placeholder="Marca teclado" pattern="[a-zA-Z ]{5,20}" required>
+
+    <label for="Serial del teclado">S/N</label>
+    <input type="text" name="snteclado" id="snteclado" placeholder="ABCDE###########" pattern="[A-Z0-9]{8,22}" title="Número serial del teclado, recuerde es alfanúmerico"required>
+
+    <label for="mouse">Marca mouse</label>
+    <input type="text" name="mouse" id="mouse" placeholder="Marca mouse" pattern="[a-zA-Z ]{5,20}" required>
+
+    <label for="Serial del mouse">S/N</label>
+    <input type="text" name="snmouse" id="snmouse" placeholder="ABCDE###########" pattern="[A-Z0-9]{8,22}" title="Número serial del mouse, recuerde es alfanúmerico"required>
+
+    <input type="submit" name="enviar" value="Enviar"/>
+    
+</form>
+
+    </div>     
+</body>
+</html>

@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Gestión</title>
+        <meta charset="utf-8"></meta>
+            <link rel="stylesheet" type="text/css" href="MaquetadoG.css"></link>
+    </h:head>
+        <h:body>
+           <div id="contenedor">
+            <div id="cabecera"> 
+                <div id="logo"> <img src="img/logocwh1.1.png" height="100"></img></div>
+            <div id="header"> <h1><center><font SIZE="6">Plataforma de Asistencia en Control y Gestión de Activos</font></center></h1></div>
+            <div id="logueo"> <img src="img/LoginPaola.png" height="55"></img></div>
+            <div id="contenido">
+              <div id="section">
+              <ul class="navbar">
+                  <li><h:link class="RegUsuario" outcome="usuarioreg">CREAR USUARIO</h:link><!--<a href="GestionA.html">CREAR USUARIO</a>--></li>
+                  <li><h:link class="CrearEq" outcome="equiporeg">CREAR EQUIPO</h:link><!--<a href="Paginaerror404.html">CREAR EQUIPO</a>--></li> 
+              <li><h:link class="HojaVida" outcome="hojadevida">HOJA DE VIDA EQUIPOS</h:link><!--<a href="Paginaerror404.html">HOJA DE VIDA EQUIPOS</a>--></li>
+              <li><h:link class="Asignacion" outcome="PaginaError404">ASIGNACIÓN DE EQUIPOS</h:link><!--<a href="Paginaerror404.html">ASIGNACIÓN DE EQUIPOS</a>--></li>
+              <li><h:link class="Reportes" outcome="reportesG">REPORTES</h:link><!--<a href="Reportes.html">REPORTES</a>--></li>
+              <li><h:link class="Principal" outcome="index">SALIR</h:link><!--<a href="IndexP.html">SALIR</a>--></li>
+              </ul>
+            <div id="footer"> 
+                <br></br>
+              <p><h4><center>Software Pacga es una marca registrada desarrollada y aprobada por Dayana Espitia, Paola Manrique y Camilo Silva</center></h4></p>
+              <p><h4><center>Copyright todos los derechos reservados</center></h4></p>
+              <p><h4><center>Marzo 2021</center></h4></p>
+              </div>
+            </div>         
+              </div>
+              <div id="aside"> 
+              <center>
+              <table border="2">
+              <tr><td>
+              <p><h2><center>Formulario de registro</center></h2></p>
+              </td></tr>
+              </table>
+              </center> 
+                  <br></br>
+              <p><center><h3><font SIZE="3">Datos de usuario</font></h3></center></p>
+              <br></br>
+              <h:form>
+              <!--<form action="Paginaerror500N.html" target="" method="get" name="DatosPersonales">-->
+              <p:growl id="mensaje" autoUpdate="false" severity="info, fatal" showSummary="true" showDetail="true"/>
+            <label for="nombres">Nombre</label>
+            <p:inputText id="txtNombres" value="#{usuarioController.persona.nombres}" required="true" />
+            <!--<input type="text" name="nombres" id="nombre" placeholder="Nombre" pattern="[A-Za-z]{3,9}" title="Solo primer nombre" required=""></input>-->
+            <label for="apellidos">Apellido</label>
+            <p:inputText id="txtApellidos" value="#{usuarioController.persona.apellidos}" required="true"/>
+            <!--<input type ="text" name="apellidos" id="apellidos" placeholder="Apellidos" pattern="[A-Za-z]{3,9}" title="Solo primer apellido" required=""></input>-->
+
+            <label for="direccion">Sexo</label>&nbsp;
+            <p:selectOneMenu id="rdbSexo" value="#{usuarioController.persona.sexo}" required="true">
+                        <f:selectItem itemValue="M" itemLabel="Masculino" />
+                        <f:selectItem itemValue="F" itemLabel="Femenino" />
+                    </p:selectOneMenu>
+            <!--<input type ="text" name="direccion" id="direccion" placeholder="Direccion del titular" required=""></input>-->
+
+            <label for="tipodocumento">Tipo de cuenta</label>
+              <p:selectOneMenu id="cboTipo" value="#{usuarioController.usuario.tipo}" required="true" requiredMessage="Campo requerido">
+                        <f:selectItem itemValue="A" itemLabel="Administrador"/>
+                        <f:selectItem itemValue="O" itemLabel="Tecnico"/>          
+                    </p:selectOneMenu>
+            <!--<input type="text" name="tipodocumento" id="tipodocumento" placeholder="Tipo de documento" pattern="[A-Za-z]{3,9}" title="cedula? pasaporte?, cual" required>-->
+
+            <label for="numerodocumento">Usuario</label>
+            <p:inputText id="txtUsuario" value="#{usuarioController.usuario.usuario}" required="true" requiredMessage="Campo requerido"/>
+            <!--<input type ="text" name="numerodocumento" id="numerodocumento" placeholder="Numero documento" pattern="[0-9]{9,10}" required=""></input>-->
+            <br></br>
+            <label for="email">Clave</label>&nbsp;
+            <p:password id="clave1" value="#{usuarioController.usuario.clave}" required="true"
+            validatorMessage="Las claves no coinciden" weakLabel="Débil" strongLabel="Fuerte" goodLabel="Bueno"
+            match="clave2" feedback="true" promptLabel="Ingrese una clave"/>
+            <!--<input type="email" name="email" id="email" placeholder="email" title="Correo personal" required=""></input>-->
+            <br></br>
+            <label for="celular">Repetir clave</label>&nbsp;
+            <p:password id="clave2" required="true" requiredMessage="Campo requerido"/>
+            <!--<input type="text" name="celular" id="celular" placeholder="Numero celular del titular" pattern="[0-9]{10}"  tittle="El número debe contener 10 digitos" required=""></input>-->
+
+            <!--<label for="fijo">Fijo o celular 2 cll</label>-->
+            <!--<p:inputText value=""/>-->
+            <!--<input type="text" name="fijo" id="fijo" placeholder="Numero fijo o celular del titular" pattern="[0-9]{7,10}" required=""></input>-->
+            <br></br>
+            <label for="hora">Fecha Registro</label>
+            <p:calendar id="txtFecha" value="#{usuarioController.persona.fechaNacimiento}" locale="es" required="true"/>
+            <!--<label for="numregistro">Id Usuario</label>-->
+            <!--<input type="text" name="idusuario" id="idusuario" placeholder="Id Usuario" pattern="[A-Z]{2}[0-9]{5,12}" title="Numero registro Pacga" onfocus="addword()" required=""></input>-->
+            <br></br>
+            <h:commandButton type="submit" value="Enviar" actionListener="#{usuarioController.registrar()}"/>
+            <!--<input type="submit" name="enviar" value="Enviar"/>-->
+
+         </h:form>
+               
+            </div>
+        </div> 
+       </div>
+             <h:outputScript library="js" name="spanishLocale.js" />
+    </h:body>
+</html>
+
+
+

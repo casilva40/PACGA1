@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#contenedor{
+    width: 1340px;
+    height: 1000px;
+    background: url("img/fondo1.jpg")/*transparent/*#0d0d0e*/;
+    margin: 0.5em auto;
+    padding: 0.5em;    
+}
+
+#cabecera{
+    width: 98.8%;
+    height: 12%;
+    /*background: /*#565a5b*/;
+    margin: 0.5em;  
+}
+
+#logo{
+    width:15%;
+    height:80%;
+    /*background: /*#565a5b*/;    
+    margin: 0.8em;
+    float: left;          
+}
+
+#header{
+    width: 60%; 
+    height:80%;
+    /*background: /*#565a5b*/;    
+    margin: 0.6em;
+    float: left;
+    padding: 0.8%;           
+}
+
+#logueo{
+    width:15.5%;
+    height:60%;
+    /*background: /*#565a5b*/;    
+    margin: 1.5em;
+    float: right;
+
+}
+
+#contenido{
+    height: 52%;
+    /*background: /*#565a5b*/;
+                    
+}
+
+#section{
+    height: 95%;
+    width: -81%;
+    background: none;    
+    margin: -1em;   
+    float: left;          
+}
+
+#aside{
+    height:387%;
+    width: 74.6%;
+    /*background: /*#336eff*/; 
+    padding: 1em;   
+    margin: -2.6em; 
+    float: right;
+    margin-right: 0.01em;
+}
+
+#footer{
+    height: 359.9%; 
+    width: 24.8%;
+    /*background: /*#565a5b*/;
+    padding: 16px;
+    margin:  0.1em;
+    float: left;
+    margin-left: 1em; 
+    font-weight:normal;
+}
+
+body {
+    font-family: "Century Gothic";
+    font-weight:bold;
+    color: White;
+}
+
+ul.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 0.1em;
+    left: 1em;
+    width: 19em 
+}
+
+ul.navbar li {
+    background: #DF8153/*CB6331/*#B85C24/*#177BE3*/;
+    margin: 0.5em 0;
+    padding: 0.3em;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-right: 1em solid #08488A
+}
+
+h4 {
+    font-family: "Century Gothic";
+    font-weight:bold;
+    color: Black;
+}
+
+h1 {
+    color: black;
+    font-family: Century Gothic;
+}
+
+h2 {
+    color: Black;
+    font-family: Century Gothic;
+}
+
+h3 {
+    color: black;
+    font-family: Century Gothic;
+
+}
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-color: /*#333*/;
+
+}
+
+  li {
+    float: center; 
+}
+
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 1px 1px;
+    text-decoration: none;
+}
+
+select{
+    width:220px;
+    height:25px; 
+    font-weight:Century Gothic;
+    display:inline-block;
+    padding:4px 10px;
+    border:1px solid #f6f6f6;
+    border-radius:3px;
+    background-color:#f6f6f6;
+    margin:8px 8px;
+}
+
+form {
+    width:880px;
+    height:350px;/*285px;*/  
+    padding:33.4px;
+    border-radius:none;
+    margin:auto;
+    background-color:#08488A/*#177BE3/*#565a5b*/;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+form label{
+    width:135px;
+    height:40px; 
+    font-weight:Century Gothic;
+    display:inline-block;
+}
+
+form input[type="text"],
+form input[type="email"]{
+    width:200px;
+    padding:4px 10px;
+    border:1px solid #f6f6f6;
+    border-radius:3px;
+    background-color:#f6f6f6;
+    margin:8px 8px;
+    display:inline-block;
+}
+
+form password[type="text"],
+form password[type="email"]{
+    width:200px;
+    padding:4px 10px;
+    border:1px solid #f6f6f6;
+    border-radius:3px;
+    background-color:#f6f6f6;
+    margin:8px 8px;
+    display:inline-block;
+}
+
+form input[type="number"]{
+    width:200px;
+    padding:4px 10px;
+    border:1px solid #f6f6f6;
+    border-radius:3px;
+    background-color:#f6f6f6;
+    margin:8px 8px;
+    display:inline-block;
+}
+
+form input[type="submit"]{
+    width:20%;
+    padding:6px 16px;
+    margin-top:12px;
+    border:1px solid #000;
+    border-radius:5px;
+    display:block;
+    color:#000;
+    background-color:#DF8153/*867C77*/;
+
+} 
+
+form input[type="time"]{
+    width:200px;
+    padding:4px 10px;
+    border:1px solid #f6f6f6;
+    border-radius:3px;
+    background-color:#f6f6f6;
+    margin:8px 8px;
+    display:inline-block;
+    font: 1rem 'Fira Sans', sans-serif;
+    
+}

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <meta name="viewport" content="width=device-width, initial.scale?1.0"/>
+        
+    </h:head>
+    <h:body>
+        <h:form>
+                    <p:outputLabel for="txtNombres" value="Nombres" />
+                    <p:inputText id="txtNombres" value="#{equipoController.equipo.serial}" required="true" />
+                    <br></br>
+                    <p:outputLabel for="txtMarca" value="Marca" />
+                    <p:inputText id="txtMarca" value="#{equipoController.equipo.marca}" required="true" />
+                    <br></br>
+                    <!--<p:outputLabel for="txtTipo" value="Tipo" />
+                    <p:inputText id="txtTipo" value="#{equipoController.equipo.tiposs}" required="true" />-->
+                     <label for="rdbTipo">Tipo</label>&nbsp;
+            <p:selectOneMenu id="rdbTipo" value="#{equipoController.equipo.tiposs}" required="true">
+                        <f:selectItem itemValue="POT" itemLabel="Portatil" />
+                        <f:selectItem itemValue="ESC" itemLabel="Escritorio" />
+                    </p:selectOneMenu>
+                    <br></br>
+                    <p:outputLabel for="txtProcesador" value="Procesador" />
+                    <p:inputText id="txtProcesador" value="#{equipoController.equipo.nucleo}" required="true" />
+                    <br></br>
+                    <p:outputLabel for="txtMemoria" value="Memoria" />
+                    <p:inputText id="txtMemoria" value="#{equipoController.equipo.memoria}" required="true" />
+                    <br></br>
+                    <p:outputLabel for="txtCapram" value="Capram" />
+                    <p:inputText id="txtCapram" value="#{equipoController.equipo.capmem}" required="true" />
+                    <br></br>
+                    <p:outputLabel for="txtDisco" value="Disco" />
+                    <p:inputText id="txtDisco" value="#{equipoController.equipo.disco_duro}" required="true" />
+                    <br></br>
+                    <p:outputLabel for="txtCapdisco" value="Capdisco" />
+                    <p:inputText id="txtCapdisco" value="#{equipoController.equipo.capdisco}" required="true" />
+                    <br></br>
+                     <p:outputLabel for="txtTeclado" value="Teclado" />
+                     <p:inputText id="txtTeclado" value="#{equipoController.equipo.teclado}" required="true" />
+                    <br></br>
+                     <p:outputLabel for="txtMouse" value="Mouse" />
+                     <p:inputText id="txtMouse" value="#{equipoController.equipo.mouse}" required="true" />
+                    <br></br>
+                     <p:outputLabel for="txtPantalla" value="Pantalla" />
+                    <p:inputText id="txtPantalla" value="#{equipoController.equipo.pantalla}" required="true" />
+                    <br></br>
+                     <p:outputLabel for="txtConding" value="Condición de ingreso" />
+                     <p:inputTextarea style="textarea" id="txtConding" value="#{equipoController.equipo.conding}" required="true" />
+                    <br></br>
+                    <p:commandButton icon="ui-icon-check" value="Registrar" actionListener="#{equipoController.registrar()}"/>
+        </h:form>
+    </h:body>
+</html>
+

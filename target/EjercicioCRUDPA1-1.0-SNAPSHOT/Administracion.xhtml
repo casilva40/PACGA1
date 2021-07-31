@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Gestión</title>
+        <meta name="viewport" content="width=device-width, initial.scale?1.0"/>
+        <meta charset="utf-8"></meta>
+            <link rel="stylesheet" type="text/css" href="MaquetadoG.css"></link>
+    <script type="text/javascript">
+        function addword(){
+        var doc =document.getElementById('tipodocumento').value;
+        var numdoc =document.getElementById('numerodocumento').value;
+        document.getElementById('idusuario').value=(doc+numdoc);
+      }
+    </script>
+    </h:head>
+        <h:body>
+           <div id="contenedor">
+            <div id="cabecera"> 
+                <div id="logo"> <img src="img/logocwh1.1.png" height="100"></img></div>
+            <div id="header"> <h1><center><font SIZE="6">Plataforma de Asistencia en Control y Gestión de Activos</font></center></h1></div>
+            <div id="logueo"> <img src="img/LoginPaola.png" height="55"></img></div>
+            <div id="contenido">
+              <div id="section">
+              <ul class="navbar">
+                  <li><a href="GestionA.html">CREAR USUARIO</a></li>
+                  <li><a href="Paginaerror404.html">CREAR EQUIPO</a></li> 
+              <li><a href="Paginaerror404.html">HOJA DE VIDA EQUIPOS</a></li>
+              <li><a href="Paginaerror404.html">ASIGNACIÓN DE EQUIPOS</a></li>
+              <li><a href="Reportes.html">REPORTES</a></li>
+              <li><a href="IndexP.html">SALIR</a></li>
+              </ul>
+            <div id="footer"> 
+                <br></br>
+              <p><h4><center>Software Pacga es una marca registrada desarrollada y aprobada por Mayer Contreras, Dayana Espitia, Paola Manrique y Camilo Silva</center></h4></p>
+              <p><h4><center>Copyright todos los derechos reservados</center></h4></p>
+              <p><h4><center>Noviembre 2020</center></h4></p>
+              </div>
+            </div>         
+              </div>
+              <div id="aside"> 
+              <center>
+              <table border="2">
+              <tr><td>
+              <p><h2><center>Formulario de registro</center></h2></p>
+              </td></tr>
+              </table>
+              </center> 
+                  <br></br>
+              <p><center><h3><font SIZE="3">Datos de usuario</font></h3></center></p>
+              <br></br>
+              <h:form>
+              <!--<form action="Paginaerror500N.html" target="" method="get" name="DatosPersonales">-->
+
+            <label for="nombres">Nombre</label>
+            <p:inputText value=""/>
+            <!--<input type="text" name="nombres" id="nombre" placeholder="Nombre" pattern="[A-Za-z]{3,9}" title="Solo primer nombre" required=""></input>-->
+
+            <label for="apellidos">Apellido</label>
+            <p:inputText value=""/>
+            <!--<input type ="text" name="apellidos" id="apellidos" placeholder="Apellidos" pattern="[A-Za-z]{3,9}" title="Solo primer apellido" required=""></input>-->
+
+            <label for="direccion">DirecciónCarrera</label>
+            <p:inputText value=""/>
+            <!--<input type ="text" name="direccion" id="direccion" placeholder="Direccion del titular" required=""></input>-->
+
+            <label for="tipodocumento">Tipo documento</label>
+              <select name="tipodocumento" id="tipodocumento">
+                <option value="CC">CC</option> 
+                <option value="TI">TI</option> 
+                <option value="CE">CE</option>
+              </select>
+            <!--<input type="text" name="tipodocumento" id="tipodocumento" placeholder="Tipo de documento" pattern="[A-Za-z]{3,9}" title="cedula? pasaporte?, cual" required>-->
+
+            <label for="numerodocumento">Numero documento</label>
+            <p:inputText value=""/>
+            <!--<input type ="text" name="numerodocumento" id="numerodocumento" placeholder="Numero documento" pattern="[0-9]{9,10}" required=""></input>-->
+
+            <label for="email" >EmailEdad</label>
+            <p:inputText value=""/>
+            <!--<input type="email" name="email" id="email" placeholder="email" title="Correo personal" required=""></input>-->
+
+            <label for="celular">CelularAv</label>
+            <p:inputText value=""/>
+            <!--<input type="text" name="celular" id="celular" placeholder="Numero celular del titular" pattern="[0-9]{10}"  tittle="El número debe contener 10 digitos" required=""></input>-->
+
+            <label for="fijo">Fijo o celular 2 cll</label>
+            <p:inputText value=""/>
+            <!--<input type="text" name="fijo" id="fijo" placeholder="Numero fijo o celular del titular" pattern="[0-9]{7,10}" required=""></input>-->
+
+            <label for="hora">Hora registro</label>
+            <input type="time" required=""></input>
+            <label for="numregistro">Id Usuario</label>
+            <input type="text" name="idusuario" id="idusuario" placeholder="Id Usuario" pattern="[A-Z]{2}[0-9]{5,12}" title="Numero registro Pacga" onfocus="addword()" required=""></input>
+
+            <h:commandButton type="submit" value="Enviar" actionListener="#{usuarioController.registrar()}"/>
+            <!--<input type="submit" name="enviar" value="Enviar"/>-->
+             <p:commandButton icon="ui-icon-check" value="Registrar" actionListener="#{usuarioController.registrar()}"/>
+              <p:commandButton icon="ui-icon-check" value="Registrar" actionListener="#{usuarioController.registrar()}"/>
+         </h:form>
+            </div>
+        </div> 
+       </div>
+    </h:body>
+</html>
+

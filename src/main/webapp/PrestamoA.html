@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Préstamo</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="MaquetadoP.css">
+</head>
+<body>
+  <div id="contenedor">
+    <div id="cabecera"> 
+    <div id="logo"> <img src="img/Logocwh1.1.png" height="100"></div>
+    <div id="header"> <h1><center><FONT SIZE=6>Plataforma de Asistencia en Control y Gestión de Activos</h1></center></font></div>
+    <div id="logueo"> <img src="img/LoginDayana.png" height="55"></div>
+    <div id="contenido">
+      <div id="section">
+      <ul class="navbar">   
+      <li><a href="Paginaerror404.html">ADMINISTRACIÓN</a>
+      <li><a href="PrestamoA.html">PRESTAMO</a>
+      <li><a href="Paginaerror404.html">HOJA DE VIDA EQUIPOS</a>
+      <li><a href="Paginaerror404.html">ASIGNACIÓN DE EQUIPOS</a>
+      <li><a href="Paginaerror404.html">REPORTES</a>
+      <li><a href="IndexP.html">SALIR</a>   
+      </ul>
+    <div id="footer">
+    <br> 
+      <p><h4><center>Software Pacga es una marca registrada desarrollada y aprobada por Mayer Contreras, Dayana Espitia, Paola Manrique y Camilo Silva</p></h4></center> 
+      <p><h4><center>Copyright todos los derechos reservados</p></h4></center> 
+      <p><h4><center>Noviembre 2020</p></h4></center>
+      </div>
+    </div>         
+      </div>
+      <div id="aside"> 
+      <center>
+      <table border=2>
+      <tr><td>
+      <p><h2><center>Formulario de Préstamo</h2></center></p>
+      </tr></td>
+      </table>
+      </center> 
+      <br>
+      <p><center><h3><FONT SIZE=3>Información del equipo<h3></p></font></center>
+      <br>
+      <div id="izquierda">
+
+<form action="Paginaerror500N.html" target="" method="get" name="formDatosPersonales">
+
+  <label for="ref">Num referencia</label>
+  <input type="text" name="ref" id="ref" placeholder="A #########" pattern="[A-Za-z]{1}[0-9]{5,10}" title="El número de ref inica por una letra" required/>
+
+  <label for="nombre">Nombre</label>
+  <input type="text" name="nombre" id="nombre" placeholder="Nombre del solicitante" pattern="[A-Za-z]{3,9}" title="Solo primer nombre" required/>
+
+  <label for="apellidos">Apellido</label>
+  <input type="text" name="apellidos" id="apellidos" placeholder="Apellido del solicitante" pattern="[A-Za-z]{3,9}" title="Solo primer apellido"required/>
+
+  <label for="marcaeq" />Marca</label>
+  <input type="text" name="marcaeq" id="marcaeq" placeholder="Marca equipo" pattern="[A-Za-z]{2,10}" required/>
+
+  <label for="serial">S/N Equipo</label>
+  <input type ="text" name="serial" id="serial" placeholder="ABCDE###########" pattern="[A-Z0-9]{8,22}" title="Número serial del equipo, recuerde es alfanúmerico"required/>
+
+  
+  <input type="submit" name="enviar" value="Enviar"/>   
+</form>
+    </div>   
+      <div id="derecha">  
+
+<form action="#" target="" method="get" name="formDatosPersonales">
+
+  <label for="start">Fecha recepción:</label>
+
+  <input type="date" id="start" name="trip-start"
+       value="2021-01-01"
+       min="2021-01-01" max="2050-12-31">  
+
+  <label for="start">Fecha entrega:</label>
+
+  <input type="date" id="start" name="trip-start"
+       value="2021-01-01"
+       min="2021-01-01" max="2050-12-31">
+
+  <label for="mensaje">Información técnica</label>
+  <textarea name="mensaje" for="mensaje" placeholder="Describa brevemente en menos de 400 carácteres" maxlength="400"></textarea>
+ 
+</form>
+    </div>
+    </div>     
+</body>
+</html>

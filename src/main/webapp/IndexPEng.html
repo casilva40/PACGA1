@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IndexPEng</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="Maquetado.css">
+</head>
+<body>
+  <div id="contenedor">
+    <div id="cabecera"> 
+    <div id="logo"> <img src="img/Logocwh1.1.png" height="150"></div>
+    <div id="header"> <h1><center><FONT SIZE=7>Asistence Platform in Control and Management Assets</h1></center></FONT></div>
+    <div id="idioma">
+        <select onchange="location.href=this.options[this.selectedIndex].value" name="elige" size="1">
+           <option value="#" selected>Language</option>
+           <option value="IndexPEng.html">English</option>
+           <option value="IndexP.html">Spanish</option> 
+        </select>
+    </div>
+  </div>
+    <div id="nav">
+    <ul>
+  <li><a href="Gestion.html">Modules</a></li>
+</ul>  
+    </div>
+    <div id="contenido"> 
+      <div class="entry">  
+        <h1><center><FONT SIZE=6>Welcome, please type your User and password, if you are a invited, press modules</h1></FONT></center> 
+          <center><video autoplay loop controls src="img/IntroPacgaEng.mp4" width="540" height="440"></video></center>
+      </div> 
+      <div class="login-box">
+          <h2><center>User Log In</center></h2><br><br>
+              <form name="login"> 
+              <th scope="row"><p>User</p></th> 
+              <input name="usuario" type="text" class="Input" value="" size="20" placeholder="Type your number id">
+              <th height="33" scope="row"><p>Password</p></th>
+              <input name="password" type="password" class="Input" value="" size="20" placeholder="Type your password">
+              <input value="Login" type="button" name="submit" target="_parent" onclick="Login()" >
+              <a href="Paginaerror500N.html">Forgot your password</a> 
+              </form>     
+      </div>
+    <div id="footer"> 
+      <p><center>Software Pacga is a trademark developed and aproved by Dayana Espitia, Paola Manrique y Camilo Silva</p></center> 
+      <p><center>Copyright All rights reserved.</p></center> 
+      <p><center>March 2021</p></center>
+    </div>
+  </div>
+<script language="JavaScript"> 
+function Login(){ 
+var done=0; 
+var usuario=document.login.usuario.value; 
+var password=document.login.password.value; 
+if (usuario=="1010105885" && password=="Cowork1") { 
+window.location="GestionAEng.html"; 
+  } 
+  else if (usuario=="1015417404" && password=="Cowork2") { 
+    window.location="AsignacionA.html"; 
+    }
+    else if (usuario=="1002701249" && password=="Cowork3") { 
+      window.location="PrestamoA.html"; 
+      } 
+      else{
+            alert("El ususario o la contraseña ingresada no son correctos por favor verifique sus datos.");
+          } 
+
+} 
+</script> 
+</center> 
+<script language="Javascript"> 
+document.oncontextmenu = function(){return false} 
+</script>
+</body>
+</html> 

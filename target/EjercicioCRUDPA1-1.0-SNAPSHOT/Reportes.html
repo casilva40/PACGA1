@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reportes</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="MaquetadoA.css">
+    <script type="text/javascript">function reportess(){
+    var rep =document.getElementById('tipreport').value;
+    //location.href='https://www.facebook.com'
+    if(rep==1){
+      window.open('Repasigna.pdf', '_blank');
+    }else if(rep==2){
+      window.open('Repclientesreg.pdf', '_blank');
+    }else{
+      window.open('Repequiposreg.pdf', '_blank');
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="contenedor">
+    <div id="cabecera"> 
+    <div id="logo"> <img src="img/Logocwh1.1.png" height="100"></div>
+    <div id="header"> <h1><FONT SIZE=6>Plataforma de Asistencia en Control y Gestión de Activos</h1></font></div>
+    <div id="logueo"> <img src="img/LoginPaola.png" height="55"></div>
+    <div id="contenido">
+      <div id="section">
+      <ul class="navbar">
+      <li><a href="GestionA.html">ADMINISTRACIÓN</a>
+      <li><a href="Paginaerror404.html">PRESTAMO</a>
+      <li><a href="Paginaerror404.html">HOJA DE VIDA EQUIPOS</a>
+      <li><a href="Paginaerror404.html">ASIGNACIÓN DE EQUIPOS</a>
+      <li><a href="Reportes.html">REPORTES</a>
+      <li><a href="IndexP.html">SALIR</a>   
+      </ul>
+    <div id="footer">
+    <br> 
+      <p><h4><center>Software Pacga es una marca registrada desarrollada y aprobada por Mayer Contreras, Dayana Espitia, Paola Manrique y Camilo Silva</p></h4></center> 
+      <p><h4><center>Copyright todos los derechos reservados</p></h4></center> 
+      <p><h4><center>Noviembre 2020</p></h4></center>
+      </div>
+    </div>         
+      </div>
+      <div id="aside"> 
+      <center>
+      <table border=2>
+      <tr><td>
+      <p><h2><center>Reportes</h2></center></p>
+      </tr></td>
+      </table>
+      </center> 
+      <br>
+      <p><center><h3><FONT SIZE=3>Seleccione el reporte a consultar<h3></p></font></center>
+      <br>
+      <div id="izquierda">
+
+<form action="#" target="" method="get" name="formDatosPersonales">
+<label for="start">Seleccione la Fecha:</label>
+
+<input type="date" id="start" name="trip-start"
+       value="2021-01-01"
+       min="2021-01-01" max="2050-12-31">  
+</form>
+    </div>   
+      <div id="derecha">  
+
+<form action="#" target="" method="get" name="formDatosPersonales">
+ <label for="tipreport" />Tipo de reporte</label>
+      <select name="tipreport" id="tipreport">
+        <option value="1">Equipos asignados</option> 
+        <option value="2">Clientes registrados</option> 
+        <option value="3">Equipos registrados</option>
+      </select>
+  <input type="button" onclick="javascript:reportess();" value="Ver reporte"/>
+</form>
+    </div>
+    </div>     
+</body>
+</html>

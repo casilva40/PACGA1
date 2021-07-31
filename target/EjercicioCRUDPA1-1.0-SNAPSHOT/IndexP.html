@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IndexP</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="Maquetado.css">
+</head>
+<body>
+  <div id="contenedor">
+    <div id="cabecera"> 
+    <div id="logo"> <img src="img/Logocwh1.1.png" height="150"></div>
+    <div id="header"> <h1><center><FONT SIZE=7>Plataforma de Asistencia en Control y Gestión de Activos</h1></center></FONT></div>
+    <div id="idioma">
+        <select onchange="location.href=this.options[this.selectedIndex].value" name="elige" size="1">
+           <option value="#" selected><FONT SIZE = 1>Idioma</FONT></option>
+           <option value="IndexP.html">Español</option> 
+           <option value="IndexPEng.html">Ingles</option>
+        </select>
+    </div>
+  </div>
+    <div id="nav">
+    <ul>
+  <li><a href="Gestion.html">Módulos</a></li>
+</ul>  
+    </div>
+    <div id="contenido"> 
+      <div class="entry">  
+        <h1><center><FONT SIZE=6>Bienvenido, por favor ingrese su usuario y contraseña, si es un usuario invitado, ingrese en la opción módulos</h1></FONT></center> 
+          <center><video autoplay loop controls src="img/IntroPacga.mp4" width="540" height="440"></video></center>
+      </div> 
+      <div class="login-box">
+          <h2><center>Iniciar Sesión</center></h2><br><br>
+              <form name="login"> 
+              <th scope="row"><p>Usuario</p></th> 
+              <input name="usuario" type="text" class="Input" value="" size="20" placeholder="Ingrese su número de cedula">
+              <th height="33" scope="row"><p>Contraseña</p></th>
+              <input name="password" type="password" class="Input" value="" size="20" placeholder="Ingrese contraseña">
+              <input value="Ingresar" type="button" name="submit" target="_parent" onclick="Login()" >
+              <a href="Paginaerror500N.html">Olvido su contraseña</a> 
+              </form>     
+      </div>
+    <div id="footer"> 
+      <p><center>Software Pacga es una marca registrada desarrollada y aprobada por Mayer Contreras, Dayana Espitia, Paola Manrique y Camilo Silva</p></center> 
+      <p><center>Copyright todos los derechos reservados</p></center> 
+      <p><center>Noviembre 2020</p></center>
+    </div>
+  </div>
+<script language="JavaScript"> 
+function Login(){ 
+var done=0; 
+var usuario=document.login.usuario.value; 
+var password=document.login.password.value; 
+if (usuario=="1010105885" && password=="Cowork1") { 
+window.location="GestionA.html"; 
+  } 
+  else if (usuario=="1015417404" && password=="Cowork2") { 
+    window.location="AsignacionA.html"; 
+    }
+    else if (usuario=="1002701249" && password=="Cowork3") { 
+      window.location="PrestamoA.html"; 
+      } 
+      else{
+            alert("El ususario o la contraseña ingresada no son correctos por favor verifique sus datos.");
+          } 
+
+} 
+</script> 
+</center> 
+<script language="Javascript"> 
+document.oncontextmenu = function(){return false} 
+</script>
+</body>
+</html> 

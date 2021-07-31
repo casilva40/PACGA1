@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Reportes</title>
+        <meta charset="utf-8"></meta>
+            <link rel="stylesheet" type="text/css" href="MaquetadoR.css"></link>
+    </h:head>
+        <h:body>
+           <div id="contenedor">
+            <div id="cabecera"> 
+                <div id="logo"> <img src="img/logocwh1.1.png" height="100"></img></div>
+            <div id="header"> <h1><center><font SIZE="6">Plataforma de Asistencia en Control y Gestión de Activos</font></center></h1></div>
+            <div id="logueo"> <img src="img/LoginPaola.png" height="55"></img></div>
+            <div id="contenido">
+              <div id="section">
+              <ul class="navbar">
+                  <li><h:link class="RegUsuario" outcome="usuarioreg">CREAR USUARIO</h:link><!--<a href="GestionA.html">CREAR USUARIO</a>--></li>
+                  <li><h:link class="CrearEq" outcome="PaginaError404">CREAR EQUIPO</h:link><!--<a href="Paginaerror404.html">CREAR EQUIPO</a>--></li> 
+              <li><h:link class="HojaVida" outcome="PaginaError404">HOJA DE VIDA EQUIPOS</h:link><!--<a href="Paginaerror404.html">HOJA DE VIDA EQUIPOS</a>--></li>
+              <li><h:link class="Asignacion" outcome="PaginaError404">ASIGNACIÓN DE EQUIPOS</h:link><!--<a href="Paginaerror404.html">ASIGNACIÓN DE EQUIPOS</a>--></li>
+              <li><h:link class="Reportes" outcome="reportesG">REPORTES</h:link><!--<a href="Reportes.html">REPORTES</a>--></li>
+              <li><h:link class="Principal" outcome="index">SALIR</h:link><!--<a href="IndexP.html">SALIR</a>--></li>
+              </ul>
+            <div id="footer"> 
+                <br></br>
+              <p><h4><center>Software Pacga es una marca registrada desarrollada y aprobada por Dayana Espitia, Paola Manrique y Camilo Silva</center></h4></p>
+              <p><h4><center>Copyright todos los derechos reservados</center></h4></p>
+              <p><h4><center>Marzo 2021</center></h4></p>
+              </div>
+            </div>         
+              </div>
+              <div id="aside"> 
+              <center>
+              <table border="2">
+              <tr><td>
+              <p><h2><center>Reportes</center></h2></p>
+              </td></tr>
+              </table>
+              </center> 
+                  <br></br>
+              <!--<p><center><h3><font SIZE="3">Usuarios</font></h3></center></p>-->
+              <br></br>
+              <h:form>
+              <!--<form action="Paginaerror500N.html" target="" method="get" name="DatosPersonales">-->
+              <br></br><br></br><br></br>
+              <center><p:button outcome="reportes" value="Usuarios" style="width: 350px; height: 100px ; font-size: 30px"/></center>
+              <br></br><br></br><br></br><br></br><br></br><br></br>
+              <center><p:button outcome="reportesE" value="Equipos" style="width: 350px; height: 100px ; font-size: 30px"/></center>
+              <br></br><br></br><br></br><br></br><br></br><br></br>
+              <center><p:button outcome="reportesA" value="Asignación de equipos" style="width: 350px; height: 100px ; font-size: 30px"/></center>
+         </h:form>
+               
+            </div>
+        </div> 
+       </div>
+    </h:body>
+</html>
+
+
+

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+            <!--<p:inputText/>-->
+            <!--<p:commandButton value="modulos"> </p:commandButton>-->
+  <title>Gestión</title>
+  <meta charset="utf-8"></meta>
+  <link rel="stylesheet" type="text/css" href="MaquetadoG.css"></link>
+  <!--<script type="text/javascript"href="Validar.js"></script>-->
+</h:head>
+<h:body>
+  <div id="contenedor">
+    <div id="cabecera"> 
+        <div id="logo"> <img src="img/logocwh1.1.png" height="100"></img></div>
+        <div id="header"> <h1><center><p style="FONT-SIZE:6">Plataforma de Asistencia en Control y Gestión de Activos</p></center></h1></div>
+        <div id="logueo"> <img src="img/LoginGeneral.png" height="55"></img></div>
+    <div id="contenido">
+      <div id="section">
+      <ul class="navbar">
+        <li><h:link class="Error500" outcome="PaginaError500N">PRESTAMO</h:link></li>
+        <!--<li><a href="Prestamo.html">MODULO DE PRESTAMO</a></li>-->
+        <li><h:link class="Error500" outcome="PaginaError500N">ASIGNACION</h:link></li>
+        <!--<li><a href="Asignacion.html">MODULO DE ASIGNACION</a></li>-->
+        <li><h:link class="Error500" outcome="PaginaError500N">ADMINISTRACION</h:link></li>
+        <!--<li><a href="Paginaerror404.html">MODULO DE ADMINISTRACION</a></li>-->
+        <li><h:link class="Error500" outcome="PaginaError500N">HOJA DE VIDA EQUIPOS</h:link></li>
+        <!--<li><a href="Paginaerror404.html">MODULO DE HOJA DE VIDA</a></li>-->
+        <li><h:link class="Error500" outcome="PaginaError500N">ESTADOS DE EQUIPOS</h:link></li>
+        <!--<li><a href="Paginaerror404.html">ESTADOS DE EQUIPOS</a></li>-->
+        <li><h:link class="inicio" outcome="index">SALIR</h:link></li>
+        <!--<li><a href="Index.xhtml">SALIR</a></li>-->
+      </ul>
+    <div id="footer"> 
+        <br></br>
+      <p><h4><center>Software Pacga es una marca registrada desarrollada y aprobada por Mayer Contreras, Dayana Espitia, Paola Manrique y Camilo Silva</center></h4></p>
+      <p><h4><center>Copyright todos los derechos reservados</center></h4></p>
+      <p><h4><center>Noviembre 2020</center></h4></p>
+      </div>
+    </div>         
+      </div>
+      <div id="aside"> 
+      <center>
+          <table border="2">
+      <tr><td>
+              <p><h2><center>Formulario de registro</center></h2></p>
+      </td></tr>
+          </table>
+      </center> 
+          <br></br>
+          <p><center><h3><p style="FONT-SIZE:3">Datos del contacto</p></h3></center></p>
+          <br></br>
+     <form action="#" target="" method="get" name="DatosPersonales">
+
+    <label for="nombres">Nombre</label>
+    <input type="text" name="nombres" id="nombre" placeholder="Nombre" pattern="[A-Za-z]{3,9}" title="Solo primer nombre" required=""></input>
+     
+    <label for="apellidos">Apellido</label>
+    <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" pattern="[A-Za-z]{3,9}" title="Solo primer apellido" required=""></input>
+
+    <label for="direccion">Dirección</label>
+    <input type ="text" name="direccion" id="direccion" placeholder="Direccion del titular" required=""></input>
+
+    <label for="tipodocumento">Tipo documento</label>
+    <input type="text" name="tipodocumento" id="tipodocumento" placeholder="Tipo de documento" pattern="[A-Za-z]{3,9}" title="cedula? pasaporte?, cual" required=""></input>
+
+    <label for="numerodocumento">Numero documento</label>
+    <input type ="text" name="numerodocumento" id="numerodocumento" placeholder="Numero documento" pattern="[0-9]{1,9}" required=""></input>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="email" required="" title="Correo personal"></input>
+
+    <label for="celular">Celular</label>
+    <input type="text" name="celular" id="celular" placeholder="Numero celular del titular" pattern="[0-9]{1,9}" required=""></input>
+
+    <label for="fijo">Fijo o celular 2</label>
+    <input type="text" name="fijo" id="fijo" placeholder="Numero fijo o celular del titular" pattern="[0-9]{1,9}"></input>
+
+    <label for="hora">Hora registro</label>
+    <input type="number" name="hora" id="hora" placeholder="Hora del registro" required="" title="Military Hour"></input>
+
+    <label for="numregistro">Numero registro</label>
+    <input type="text" name="numregistro" id="numregistro" placeholder="Numero registro" pattern="[A-Za-z]{3}[0-9]{1,9}" title="Numero registro Pacga" required=""></input>
+    
+    <input type="submit" name="enviar" value="Enviar"></input>
+     </form>
+    </div>
+    </div>
+  </div>
+</h:body>
+</html>
+

@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Reportes</title>
+        <meta charset="utf-8"></meta>
+            <link rel="stylesheet" type="text/css" href="MaquetadoR.css"></link>
+    </h:head>
+        <h:body>
+           <div id="contenedor">
+            <div id="cabecera"> 
+                <div id="logo"> <img src="img/logocwh1.1.png" height="100"></img></div>
+            <div id="header"> <h1><center><font SIZE="6">Plataforma de Asistencia en Control y Gestión de Activos</font></center></h1></div>
+            <div id="logueo"> <img src="img/LoginPaola.png" height="55"></img></div>
+            <div id="contenido">
+              <div id="section">
+              <ul class="navbar">
+                <li><h:link class="RegUsuario" outcome="usuarioreg">CREAR USUARIO</h:link><!--<a href="GestionA.html">CREAR USUARIO</a>--></li>
+                  <li><h:link class="CrearEq" outcome="equiporeg">CREAR EQUIPO</h:link><!--<a href="Paginaerror404.html">CREAR EQUIPO</a>--></li> 
+              <li><h:link class="HojaVida" outcome="hojadevida">HOJA DE VIDA EQUIPOS</h:link><!--<a href="Paginaerror404.html">HOJA DE VIDA EQUIPOS</a>--></li>
+              <li><h:link class="Asignacion" outcome="PaginaError404">ASIGNACIÓN DE EQUIPOS</h:link><!--<a href="Paginaerror404.html">ASIGNACIÓN DE EQUIPOS</a>--></li>
+              <li><h:link class="Reportes" outcome="reportesG">REPORTES</h:link><!--<a href="Reportes.html">REPORTES</a>--></li>
+              <li><h:link class="Principal" outcome="index">SALIR</h:link><!--<a href="IndexP.html">SALIR</a>--></li>
+              </ul>
+            <div id="footer"> 
+                <br></br>
+              <p><h4><center>Software Pacga es una marca registrada desarrollada y aprobada por Dayana Espitia, Paola Manrique y Camilo Silva</center></h4></p>
+              <p><h4><center>Copyright todos los derechos reservados</center></h4></p>
+              <p><h4><center>Marzo 2021</center></h4></p>
+              </div>
+            </div>         
+              </div>
+              <div id="aside"> 
+              <center>
+              <table border="2">
+              <tr><td>
+              <p><h2><center>Reportes</center></h2></p>
+              </td></tr>
+              </table>
+              </center> 
+                  <br></br>
+              <p><center><h3><font SIZE="3">Equipos</font></h3></center></p>
+              <br></br>
+              <h:form>
+              <!--<form action="Paginaerror500N.html" target="" method="get" name="DatosPersonales">-->
+
+              <p:commandButton value="Actualizar" actionListener="#{consultarControllerE.equipos}" update="dtEquipos"/>
+
+              <h:commandLink>
+                  <h:graphicImage url="img/Excel.png"/>
+                  <p:dataExporter type="xls" target="dtEquipos" fileName="ExcelRegEquipos" /> 
+              </h:commandLink>
+              <h:commandLink>
+                  <h:graphicImage url="img/PDF.png"/>
+                  <p:dataExporter type="pdf" target="dtEquipos" fileName="PdfEquipos" /> 
+              </h:commandLink>
+              
+              <p:dataTable id="dtEquipos" value="#{consultarControllerE.equipos}" var="e" rows="8"
+                     paginator="true"
+                     paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                     currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+                     rowsPerPageTemplate="2,4,6,8">
+
+                    <p:column headerText="Serial" style="font-size: 12px">
+                        <p:outputLabel value="#{e.serial}" style="font-size: 12px"/>
+                    </p:column>
+
+                  <p:column headerText="Marca" filterBy="#{e.marca}" filterMatchMode="contains" style="font-size: 12px">
+                        <p:outputLabel value="#{e.marca}" style="font-size: 12px"/>
+                    </p:column>
+                  
+                    <p:column headerText="Marca Ram" filterBy="#{e.memoria}" filterMatchMode="contains" style="font-size: 12px">
+                        <p:outputLabel value="#{e.memoria}" style="font-size: 12px"/>
+                    </p:column>
+                  
+                    <p:column headerText="Cant. Ram" style="font-size: 12px">
+                        <p:outputLabel value="#{e.capmem}" style="font-size: 12px"/>
+                    </p:column>
+                    
+                    <p:column headerText="Tipo Disco" filterBy="#{e.disco_duro}" filterMatchMode="exact" style="font-size: 12px">
+                        <p:outputLabel value="#{e.disco_duro}" style="font-size: 12px"/>
+                    </p:column>
+                    
+                    <p:column headerText="Cap. Disco" style="font-size: 12px">
+                        <p:outputLabel value="#{e.capdisco}" style="font-size: 12px"/>
+                    </p:column>
+                    
+                    <p:column headerText="Procesador" style="font-size: 12px">
+                        <p:outputLabel value="#{e.nucleo}" style="font-size: 12px"/>
+                    </p:column>
+                    
+                    <p:column headerText="Pantalla" style="font-size: 12px">
+                        <p:outputLabel value="#{e.pantalla}" style="font-size: 12px"/>
+                    </p:column>
+                    
+                    <p:column headerText="Mouse" style="font-size: 12px">
+                        <p:outputLabel value="#{e.mouse}" style="font-size: 12px"/>
+                    </p:column>
+                    
+                    <p:column headerText="Teclado" style="font-size: 12px">
+                        <p:outputLabel value="#{e.teclado}" style="font-size: 12px"/>
+                    </p:column>
+                    
+                    <p:column headerText="Eliminar" exportable="false" style="font-size: 12px">
+                        <p:commandButton value="Eliminar" actionListener="#{equipoController.eliminar(eli)}" update="dtEquipos" style="font-size: 12px"/>
+                    </p:column>
+
+                </p:dataTable>
+         </h:form>
+               
+            </div>
+        </div> 
+       </div>
+    </h:body>
+</html>
+
+
+

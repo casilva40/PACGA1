@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Asignación</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="MaquetadoA.css">
+</head>
+<body>
+  <div id="contenedor">
+    <div id="cabecera"> 
+    <div id="logo"> <img src="img/Logocwh1.1.png" height="100"></div>
+    <div id="header"> <h1><center><FONT SIZE=6>Plataforma de Asistencia en Control y Gestión de Activos</h1></center></font></div>
+    <div id="logueo"> <img src="img/LoginCamilo.png" height="55"></div>
+    <div id="contenido">
+      <div id="section">
+      <ul class="navbar">
+      <li><a href="Paginaerror404.html">ADMINISTRACIÓN</a>
+      <li><a href="Paginaerror404.html">PRESTAMO</a>
+      <li><a href="HojadevidaA.html">HOJA DE VIDA EQUIPOS</a>
+      <li><a href="AsignacionA.html">ASIGNACIÓN DE EQUIPOS</a>
+      <li><a href="Paginaerror404.html">REPORTES</a>
+      <li><a href="IndexP.html">SALIR</a>  
+      </ul>
+    <div id="footer">
+    <br> 
+      <p><h4><center>Software Pacga es una marca registrada desarrollada y aprobada por Mayer Contreras, Dayana Espitia, Paola Manrique y Camilo Silva</p></h4></center> 
+      <p><h4><center>Copyright todos los derechos reservados</p></h4></center> 
+      <p><h4><center>Noviembre 2020</p></h4></center>
+      </div>
+    </div>         
+      </div>
+      <div id="aside"> 
+      <center>
+      <table border=2>
+      <tr><td>
+      <p><h2><center>Asignación de Equipo</h2></center></p>
+      </tr></td>
+      </table>
+      </center> 
+      <br>
+      <p><center><h3><FONT SIZE=3>Formulario de asignación a Técnico<h3></p></font></center>
+      <br>
+      <div id="izquierda">
+
+<form action="Paginaerror500N.html" target="" method="get" name="formDatosPersonales">
+
+  <label for="idtecnico">ID Técnico</label>
+  <input type="text" name="idtecnico" id="idtecnico" placeholder="# identificacion del tecnico" pattern="[0-9]{6,12}" required tittle="Ingrese la cedula del tecnico" required>
+
+  <label for="idservicio">ID Servicio</label>
+  <input type ="text" name="idservicio" id="idservicio" placeholder="# identificacion del servicio" pattern="[0-9]{1,12}" tittle="Ingrese el número del servicio" required>
+
+ <label for="tipserv" />Tipo Servicio</label>
+      <select name="tipserv" id="tipserv">
+        <option value="pred">Predictivo</option> 
+        <option value="prev">Preventivo</option> 
+        <option value="correc">Correctivo</option>
+      </select>
+
+  <label for="nombrec">Nombre Cliente</label>
+  <input type="text" name="nombrec" id="nombrec" placeholder="1er nombre y 1er apellido cliente" pattern="[a-zA-Z ]{9,20}" tittle="Solo primer nombre y primer apellido" required>
+
+  <label for="celular" />Celular</label>
+  <input type="text" name="celular" id="celular" placeholder="Numero de contacto del Cliente" pattern="[0-9]{10}" required>
+
+  <input type="submit" name="enviar" value="Enviar"/>   
+</form>
+    </div>   
+      <div id="derecha">  
+
+<form action="#" target="" method="get" name="formDatosPersonales">
+
+  <label for="idqeuipo">ID Equipo</label>
+  <input type ="text" name="idqeuipo" id="idqeuipo" placeholder="# identificacion del Equipo" pattern="[E-Q]{2}[0-9]{1,4}" tittle="El número debe contener 10 digitos" required>
+
+   <label for="estadoeq" />Estado equipo</label>
+      <select name="estadoeq" id="estadoeq">
+        <option value="B">Bueno</option> 
+        <option value="R">Regular</option> 
+        <option value="M">Malo</option>
+      </select>
+
+  <label for="mensaje">Observaciones del Cliente</label>
+  <textarea name="mensaje" for="mensaje" placeholder="Describa brevemente en menos de 400 carácteres" maxlength="400"></textarea>
+ 
+</form>
+    </div>
+    </div>     
+</body>
+</html>

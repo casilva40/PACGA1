@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gestión</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="MaquetadoG.css">
+  <script type="text/javascript">
+    function addword(){
+    var doc =document.getElementById('tipodocumento').value;
+    var numdoc =document.getElementById('numerodocumento').value;
+    document.getElementById('idusuario').value=(doc+numdoc);
+  }
+  </script>
+</head>
+<body>
+  <div id="contenedor">
+    <div id="cabecera"> 
+    <div id="logo"> <img src="img/Logocwh1.1.png" height="100"></div>
+    <div id="header"> <h1><center><FONT SIZE=6>Plataforma de Asistencia en Control y Gestión de Activos</h1></center></FONT></div>
+    <div id="logueo"> <img src="img/LoginPaola.png" height="55"></div>
+    <div id="contenido">
+      <div id="section">
+      <ul class="navbar">
+      <li><a href="GestionA.html">ADMINISTRACIÓN</a>
+      <li><a href="Paginaerror404.html">PRESTAMO</a>
+      <li><a href="Paginaerror404.html">HOJA DE VIDA EQUIPOS</a>
+      <li><a href="Paginaerror404.html">ASIGNACIÓN DE EQUIPOS</a>
+      <li><a href="Reportes.html">REPORTES</a>
+      <li><a href="IndexP.html">SALIR</a>  
+      </ul>
+    <div id="footer"> 
+      <br>
+      <p><h4><center>Software Pacga es una marca registrada desarrollada y aprobada por Mayer Contreras, Dayana Espitia, Paola Manrique y Camilo Silva</center></h4></p>
+      <p><h4><center>Copyright todos los derechos reservados</center></h4></p>
+      <p><h4><center>Noviembre 2020</center></h4></p>
+      </div>
+    </div>         
+      </div>
+      <div id="aside"> 
+      <center>
+      <table border=2>
+      <tr><td>
+      <p><h2><center>Formulario de registro</h2></center></p>
+      </tr></td>
+      </table>
+      </center> 
+      <br>
+      <p><center><h3><FONT SIZE=3>Datos de usuario</p></h3></font></center>
+      <br>
+     <form action="Paginaerror500N.html" target="" method="get" name="DatosPersonales">
+
+    <label for="nombres">Nombre</label>
+    <input type="text" name="nombres" id="nombre" placeholder="Nombre" pattern="[A-Za-z]{3,9}" title="Solo primer nombre" required>
+     
+    <label for="apellidos">Apellido</label>
+    <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" pattern="[A-Za-z]{3,9}" title="Solo primer apellido"required>
+
+    <label for="direccion">Dirección</label>
+    <input type ="text" name="direccion" id="direccion" placeholder="Direccion del titular" required>
+
+    <label for="tipodocumento" />Tipo documento</label>
+      <select name="tipodocumento" id="tipodocumento">
+        <option value="CC">CC</option> 
+        <option value="TI">TI</option> 
+        <option value="CE">CE</option>
+      </select>
+    <!--<input type="text" name="tipodocumento" id="tipodocumento" placeholder="Tipo de documento" pattern="[A-Za-z]{3,9}" title="cedula? pasaporte?, cual" required>-->
+
+    <label for="numerodocumento">Numero documento</label>
+    <input type ="text" name="numerodocumento" id="numerodocumento" placeholder="Numero documento" pattern="[0-9]{9,10}" required>
+
+    <label for="email" />Email</label>
+    <input type="email" name="email" id="email" placeholder="email" required title="Correo personal">
+
+    <label for="celular">Celular</label>
+    <input type="text" name="celular" id="celular" placeholder="Numero celular del titular" pattern="[0-9]{10}"  tittle="El número debe contener 10 digitos" required>
+
+    <label for="fijo">Fijo o celular 2</label>
+    <input type="text" name="fijo" id="fijo" placeholder="Numero fijo o celular del titular" pattern="[0-9]{7,10}" required>
+
+    <label for="hora">Hora registro</label>
+    <input type="time" required>
+    <label for="numregistro">Id Usuario</label>
+    <input type="text" name="idusuario" id="idusuario" placeholder="Id Usuario" pattern="[A-Z]{2}[0-9]{5,12}" title="Numero registro Pacga" onfocus="addword()" required>
+
+    <input type="submit" name="enviar" value="Enviar"/>
+    
+</form>
+
+    </div>     
+</body>
+</html>
